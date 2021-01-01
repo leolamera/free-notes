@@ -5,5 +5,8 @@ const router = new Router()
 
 router
     .post("/accounts", accountControllers.insertUser)
+    .post("/login", accountControllers.consultUser)
+    .delete("/accounts", accountControllers.deleteUser)
+    .get("/accounts", accountControllers.getUser)
 
 export default router
