@@ -58,7 +58,7 @@ const insertUser = async (context: any) => {
             const password = value.password
             const hashPassword = hashSync(password)
             value.password = hashPassword
-            // add new user loggin
+            // add new user logging
             await accounts.insertOne(value)
             context.response.body = {
                 "action": "post",
